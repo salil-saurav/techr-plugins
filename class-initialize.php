@@ -22,5 +22,3 @@ class Initialize_Techr_Option
       // load_env_file(ABSPATH . "/.env");
    }
 }
-
-wp_die("checking");
