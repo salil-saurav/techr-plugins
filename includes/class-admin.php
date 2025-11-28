@@ -35,12 +35,8 @@ class WP_Starter_Admin
    public function enqueue_admin_assets()
    {
       $assets = [
-         'wp-starter-fonts' => [
-            'url' => 'https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Lexend:wght@100..900&display=swap',
-            'deps' => [],
-         ],
          'wp-starter-admin-style' => [
-            'url' => get_stylesheet_directory_uri() . '/assets/css/admin.min.css',
+            'url' => TECHR_OPTIONS_URL. 'assets/css/admin.css',
             'deps' => [],
          ],
       ];

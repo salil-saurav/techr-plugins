@@ -50,6 +50,10 @@ class Custom_Login_Manager
          @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
          @import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0');
 
+         :root {
+            --login-primary-color: #8700ff;
+         }
+
          body.login {
             margin: 0;
             padding: 0;
@@ -74,7 +78,7 @@ class Custom_Login_Manager
             -webkit-backdrop-filter: blur(12px) saturate(180%);
             border-radius: 20px !important;
             padding: 40px !important;
-            border: 1px solid #8700ff !important.;
+            border: 1px solid var(--login-primary-color) !important.;
             /* box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25); */
             animation: fade-up 0.8s ease-out forwards !important;
             transform: translateY(10px);
@@ -83,7 +87,7 @@ class Custom_Login_Manager
          }
 
          .login .button.wp-hide-pw .dashicons {
-            color: #8700ff !important;
+            color: var(--login-primary-color) !important;
          }
 
          @keyframes fade-up {
@@ -100,7 +104,7 @@ class Custom_Login_Manager
 
          /* Logo */
          .login h1 a {
-            background-image: url(<?php echo esc_url(get_theme_file_uri("assets/images/Wordpress-logo.png")); ?>) !important;
+            background-image: url(<?php echo esc_url(TECHR_OPTIONS_URL . "assets/images/logo.png"); ?>) !important;
             background-size: contain !important;
             width: 200px !important;
             height: 80px !important;
@@ -120,7 +124,7 @@ class Custom_Login_Manager
          }
 
          .login form .input:focus {
-            border-color: #8700ff !important;
+            border-color: var(--login-primary-color) !important;
             box-shadow: 0 0 8px rgba(255, 255, 255, 0.6) !important;
          }
 
@@ -134,7 +138,7 @@ class Custom_Login_Manager
             top: 11px;
             left: 12px;
             font-size: 20px;
-            color: #8700ff;
+            color: var(--login-primary-color);
             opacity: 0.85;
          }
 
@@ -150,7 +154,7 @@ class Custom_Login_Manager
             padding: 10px !important;
             border-radius: 50px !important;
             background: #ffffff !important;
-            color: #8700ff !important;
+            color: var(--login-primary-color) !important;
             border: none !important;
             font-weight: 600;
             cursor: pointer;
@@ -158,7 +162,7 @@ class Custom_Login_Manager
          }
 
          .wp-core-ui .button-primary:hover {
-            background: #8700ff !important;
+            background: var(--login-primary-color) !important;
             color: #fff !important;
          }
 
@@ -180,7 +184,7 @@ class Custom_Login_Manager
 
          #nav a:hover,
          #backtoblog a:hover {
-            color: #fff !important;
+            color: var(--login-primary-color) !important;
          }
 
          /* Errors (modern toast style) */
