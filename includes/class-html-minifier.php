@@ -7,7 +7,7 @@
  * @version 1.1.0
  */
 
-namespace WPStarter\Optimization;
+namespace TechrOption;
 
 if (!defined('ABSPATH')) {
    exit; // Exit if accessed directly

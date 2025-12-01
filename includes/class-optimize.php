@@ -1,5 +1,7 @@
 <?php
 
+namespace TechrOption;
+
 class WP_Performance_Suite
 {
    /**
@@ -12,10 +14,11 @@ class WP_Performance_Suite
     * Configuration options
     * @var array
     */
+
    private $config = [
       // Basic optimizations
-      'remove_emoji'            => true,
-      'remove_embeds'           => true,
+      'remove_emoji'            => false,
+      'remove_embeds'           => false,
       'remove_wp_block_library' => true,
       'disable_xmlrpc'          => true,
       'limit_revisions'         => true,
@@ -25,7 +28,7 @@ class WP_Performance_Suite
       'disable_self_pingbacks'  => true,
       'disable_rss_feeds'       => true,
       'remove_query_strings'    => true,
-      'disable_comments'        => true,
+      'disable_comments'        => false,
 
       // Advanced optimizations
       'optimize_images'         => true,
@@ -595,8 +598,3 @@ class WP_Performance_Suite
       ]);
    }
 }
-
-// Initialization usage
-// add_action('plugins_loaded', function () {
-//    WP_Performance_Suite::get_instance();
-// });

@@ -1,6 +1,6 @@
 <?php
 
-if (!defined('ABSPATH')) exit;
+namespace TechrOption;
 
 /**
  * Custom Login Page Customization
@@ -25,7 +25,6 @@ class Custom_Login_Manager
    {
 
       // Actions
-
       add_action('login_enqueue_scripts', [$this, 'customize_login_styles'], 10, 1);
       // add_action('init', [$this, 'custom_login_rewrite_rule']);
       // add_action('init', [$this, 'redirect_wp_admin_to_404']);

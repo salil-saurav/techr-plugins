@@ -1,6 +1,5 @@
 <?php
-
-if (!defined('ABSPATH')) exit;
+namespace TechrOption;
 
 /**
  * Class WP_Starter_Admin
@@ -36,7 +35,11 @@ class WP_Starter_Admin
    {
       $assets = [
          'wp-starter-admin-style' => [
-            'url' => TECHR_OPTIONS_URL. 'assets/css/admin.css',
+            'url' => TECHR_OPTIONS_URL . 'assets/css/admin.css',
+            'deps' => [],
+         ],
+         'techr-admin-css' => [
+            'url' => TECHR_OPTIONS_URL . 'assets/css/main.css',
             'deps' => [],
          ],
       ];
