@@ -7,6 +7,8 @@ require_once __DIR__ . '/includes/class-html-minifier.php';
 require_once __DIR__ . '/includes/class-optimize.php';
 // require_once __DIR__ . '/includes/class-settings.php';
 require_once __DIR__ . '/includes/class-taxonomy-image-manager.php';
+require_once __DIR__ . '/includes/class-taxonomy-image-manager.php';
+require_once __DIR__ . '/includes/class-data-extractor.php';
 
 
 use TechrOption\HTML_Minifier;
@@ -15,6 +17,7 @@ use TechrOption\WP_Performance_Suite;
 use TechrOption\Custom_Login_Manager;
 use TechrOption\Taxonomy_Image_Manager;
 use TechrOption\Featured_Post_Manager;
+use TechrOption\Simple_XLSX_Reader;
 
 class Initialize_Techr_Option
 {
@@ -22,7 +25,7 @@ class Initialize_Techr_Option
    {
       $this->init_hooks();
 
-      // add_action('admin_menu', [$this, 'register_techr_menu']);
+      add_action('admin_menu', [$this, 'register_techr_menu']);
    }
 
    /**
